@@ -15,13 +15,13 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action: 
-        - dynambodb: DescribeTable
-        - dynamodb: Query
-        - dynamodb: Scan
-        - dynamodb: GetItem
-        - dynamodb: PutItem
-        - dynamodb: UpdateItem
-        - dynamodb: DeleteItem
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:us-east-1:*:*"
 
 functions: 
@@ -29,7 +29,7 @@ functions:
     handler: request.main
     events: 
       - http:
-          path: rides
+          path: ride
           method: post
           cors: true
-          authorizer: aws_iam
+          authorizer: ${file(./env.json):AWS_COGNITO_POOL}

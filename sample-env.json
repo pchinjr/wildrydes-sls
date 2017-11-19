@@ -1,0 +1,3 @@
+{
+    "AWS_COGNITO_POOL": "arn:aws:cognito-idp:us-east-1:xxxxxxxxxxxx:userpool/us-east-1_xxxxxxxxx"
+}
