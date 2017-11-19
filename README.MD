@@ -20,4 +20,4 @@ sls invoke local --function request --path mocks/request-event.json
 ```
 * Create and configure the API Gateway endpoint
 
-The client side code still has to be updated in config.js and I used `env.json` to hold the ARN for the Cognito Pool as an authorizer property in the `serverless.yaml` file. 
+The client side file, `config.js` still has to be updated and uploaded to S3. I used `env.json` to hold the ARN for the Cognito Pool as an authorizer property in the `serverless.yaml` file. 
